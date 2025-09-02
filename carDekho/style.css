@@ -1,0 +1,462 @@
+/* Global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+main {
+  margin-top: 120px;  
+  position: relative;
+}
+#banner-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Navbar 1 */
+#navbar-container1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 0 18px;  
+  max-height: 78px;
+}
+#nav-img {
+  width: 180px;
+  height: 66px;
+  margin-top: 2px;
+  border-radius: 20px;
+}
+.nav-items {
+  display: flex;
+  flex: 1; 
+  justify-content: space-between; 
+  align-items: center;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: 13%;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  background: #fff;
+}
+.search-filter {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: small;
+}
+#search-input {
+  border: none;
+  border-radius: 40px;
+  padding: 10px;
+  outline: none;
+  width: 413px;
+  height: 27px;
+  flex: 1; 
+}
+#right-section {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  margin-left: 140px;
+  gap: 10px;
+  align-items: center;
+}
+.wishlist-icon { font-size: 18px; cursor: pointer; }
+
+/* Dropdown */
+.dropdown { position: relative; }
+.dropdown > .menu { list-style: none; margin: 0; padding: 0; }
+.dropdown > .menu > li {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(204, 200, 200, 0.3);
+  border-radius: 20px;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  min-width: 100px;
+  z-index: 100;
+  font-weight: lighter;
+}
+.submenu li {
+  padding: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.submenu li:hover {
+  transform: scaleY(1.1);
+  transition: transform 0.2s ease;
+}
+.has-submenu:hover > .submenu { display: block; }
+.submenu .submenu { top: 0; left: 100%; border-left: 1px solid #ccc; }
+.language-label { font-size: x-small; text-decoration: underline; font-weight: bold; }
+#login-register-btn {
+  display: flex;
+  padding: 8px 16px;
+  border: none;
+  background-color: white;
+  font-weight: 540;
+  align-items: center;
+}
+#login-register-btn img { width: 20px; height: 20px; margin-right: 4px; }
+#login-register-btn:hover { cursor: pointer; }
+
+/* Navbar 2 */
+#navbar-container2 {
+  position: fixed;
+  top: 68.5px;
+  z-index: 999;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 51px;
+  padding: 0 12px;
+  border-bottom: 1px solid #ddd;
+}
+#navbar-container2 .select-city > p > a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+}
+#navbar-container2 > .select-city {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero */
+#find-car {
+  width: 24%;
+  background-color: #fff;
+  position: absolute;
+  top: 2%;
+  left: 7%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+}
+#find-car .div-find-car .active { background: #000; color: white; }
+#find-car h1 {
+  margin-left: 0;
+  margin-bottom: 20px;
+  font-size: 29px;
+  font-weight: 700;
+}
+.div-find-car {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+.div-find-car div { 
+  margin-left: 4px;
+  align-items: center;
+  padding:8px; 
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold; 
+  min-width: 40%;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #ccc;
+  display:flex;   
+  text-align: center;
+  justify-content: center;
+}
+.div-find-car div:hover { background: #000; color: white; }
+.checkbox-container { display: flex; gap: 20px; margin: 20px 10px; }
+#search-btn {
+  background-color: #ff0000;
+  color: white;
+  margin: 20px 0;
+  width: 90%;
+  cursor: pointer;
+  min-height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: large; 
+  font-weight: bold;
+}
+/* Custom Dropdown */
+.custom-dropdown {
+  position: relative;
+  margin: 20px 0;
+  max-width: 90%;
+  user-select: none;
+}
+.custom-dropdown .selected {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.custom-dropdown .selected::after { content: "▾"; margin-left: 10px; font-size: 0.8em; }
+.custom-dropdown .dropdown-list {
+  position: absolute;
+  top: 88%;
+  left: 0;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 0;
+  display: none;
+  list-style: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+.custom-dropdown:hover .dropdown-list { display: block; }
+.custom-dropdown .dropdown-heading {
+  font-weight: bold;
+  padding: 8px 12px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #eee;
+}
+.custom-dropdown .dropdown-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.custom-dropdown .dropdown-list li:hover { background: #eee; }
+
+/* Cars Section */
+
+#most-searched-cars, #electric-cars, #popular-brands, #upcoming-cars,#latest-cars, .used-cars-section {
+  background-color: #ddd2d2;
+  width: 98%;
+  height: fit-content;
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  border-radius: 15px;
+}
+.cars-section {
+  padding: 10px 2%;
+  background: #f9f9f9;
+  /* text-align: center; */
+}
+.cars-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #222;
+}
+/* Tabs */
+.tabs {
+  display: flex;
+  /* justify-content: center; */
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.tab {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.tab.active,
+.tab:hover {
+  background: #ff3b3f;
+  color: #fff;
+  /* border-color: #ff3b3f; */
+}
+/* Carousel */
+.car-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.car-grid, .brand-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  scrollbar-width:auto;
+}
+
+.brand-grid::-webkit-scrollbar { display: none; }
+.car-grid::-webkit-scrollbar { display: none; }  
+.car-card, .brand-card {
+  flex: 0 0 auto;
+  width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.brand-card:hover,
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.brand-card img,
+.car-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.car-card h3 { font-size: 1.1rem; margin: 10px 0 5px; color: #333; }
+.car-card .price { font-size: 0.95rem; color: #777; margin-bottom: 10px; }
+.offer-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #ff3b3f;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.offer-btn:hover { background: #d63031; }
+
+.car-card .tag {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin: 4px 0 8px;
+}
+
+.footer-info ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 0;
+  margin: 30px 0 30px 0;
+}
+
+.footer-info ul li {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+
+.footer-info ul li div {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+}
+
+.footer-info ul li strong,
+.footer-info ul li h3 {
+  font-size: 28px;
+  margin: 0 0 4px 0;
+  display: block;
+}
+
+.footer-info ul li span {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-container-2 { 
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px;
+}
+.footer-links h4 {
+  font-size: 16px;
+  margin: 0 0 10px 0; 
+  color: #4d4d4d;
+}
+
+.footer-links ul {
+  margin: 0; 
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; 
+}
+.footer-links ul li  {
+  list-style: none;
+  margin: 0;
+ 
+  
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 12px;
+}
+
+.grid-links ul{
+  display: grid;
+  grid-template-columns: 170px 20px ;
+}
+
+.footer-bottom{
+  display: flex;
+  flex-direction: row;
+  gap: 60%;
+}
+
+.social-icons p {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+}
+.social-icons  a i{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin: 0;
+  padding: 0%;
+}
+.social-icons a {
+  color: #333; 
+  font-size: 20px; 
+  text-decoration: none;
+}

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarDekho</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./assets/carDekhofavicon.png" type="image/x-icon">
+</head>
+<body>
+
+  <nav id="navbar-container1">
+  <!-- Logo -->
+  <img src="./assets/carDekhoLogg.jpg" alt="Logo Not Found" id="nav-img">
+
+  <div class="nav-items">
+    <div class="search-container">
+      <div class="dropdown">
+        <ul class="menu">
+          <li class="has-submenu search-filter">All  ▾
+            <ul class="submenu">
+              <li>All</li>
+              <li>New</li>
+              <li>Used</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <img src="./assets/search.png" alt=""><input type="text" id="search-input" placeholder="Search or Ask a Question">
+    </div>
+ <div id="right-section">
+    <div class="dropdown">
+      <ul class="menu">
+        <li class="has-submenu "> <span class="language-label"> English</span><span style="font-size: small;">▾</span>
+          <ul class="submenu" style="font-size: small;">  
+            <li>English</li>
+            <li>ಕನ್ನಡ</li>
+            <li>हिंदी</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <i class="fa-regular fa-heart wishlist-icon"></i>
+    <button id="login-register-btn"><img src="./assets/user-interface.png" alt="">Login / Register</button>
+ </div>
+    
+  </div>
+</nav>
+
+  <!-- Navbar 2 -->
+  <nav id="navbar-container2">
+    <div class="dropdown">
+      <ul class="menu">
+        <li class="has-submenu">NEW CARS
+          <ul class="submenu">
+            <li>Explore New Cars</li>
+            <li class="has-submenu">Electric Cars
+              <ul class="submenu">
+                <li>Mahindra BE 6</li>
+                <li>Tata Harrier EV</li>
+                <li>MG Comet EV</li>
+                <li>Tata Nexon EV</li>
+              </ul>
+            </li>
+            <li class="has-submenu">Popular Cars
+              <ul class="submenu">
+                <li>Mahindra Bolero</li>
+                <li>Defender</li>
+                <li>Hyundai Creta</li>
+                <li>All Popular Cars</li>
+              </ul>
+            </li>
+            <li>Upcoming Cars</li>
+            <li>New Launches</li>
+            <li>Car Insurance</li>
+            <li class="has-submenu">Popular Brands
+              <ul class="submenu">
+                <li>Maruti Cars</li>
+                <li>Tata Cars</li>
+                <li>Kia Cars</li>
+                <li>Toyota Cars</li>
+                <li>Hyundai Cars</li>
+                <li>Mahindra Cars</li>
+              </ul>
+            </li>
+            <li>Compare Cars</li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">USED CARS
+            <ul class="submenu">
+                <li>Buy Used Cars</li>
+                <li class="has-submenu">Used Cars in your City
+                    <ul class="submenu">
+                        <li>Ahmedabad  </li>
+                        <li>Bangalore</li>
+                        <li>Chennai </li>
+                        <li>Delhi</li>
+                        <li>Hyderabad</li>
+                        <li>Jaipur</li>
+                        <li>Kolkata</li>
+                        <li>Mumbai</li>
+                        <li>Pune</li>
+                        <li>More Cities</li>
+                    </ul>
+                </li>
+                <li>Sell My Car</li>
+                <li>Used Car Valuation</li>
+                <li>Dealership Near Me</li>
+            </ul>
+        </li>
+
+        <li class="has-submenu">News & Reviews
+            <ul class="submenu">
+                <li>News & Top stories</li>
+                <li>Car Expert Reviews</li>
+                <li>User Reviews</li>
+                <li>Car Collection</li>
+                <li>Tips & Advice</li>
+            </ul>
+        </li>
+
+        <li class="has-submenu">Videos
+            <ul class="submenu">
+                <li>Video Reviews</li>
+                <li>Visual Stories</li>
+            </ul>
+        </li>
+
+
+      </ul>
+    </div>
+    <div class="select-city">
+        <p><a href="#"><img src="./assets/location.png" alt="" srcset="">Select City ▾</a></p>
+    </div>
+    
+  </nav>
+  
+  <main>
+    <img src="https://stimg.cardekho.com/images/uploadimages/1755685861633/1686x548-CD-kylaq.jpg
+" alt="" id="banner-img" style="height: 100vh; width: 100vw;">
+
+    <div id="find-car">
+        <h1 id="find-car-h1">Find your right car</h1>
+        <div class="div-find-car">
+                  <div id="new-car-div "class="active">New Car</div>
+                 <div id="used-car-div">Used Car</div>
+        </div>
+        <div class="checkbox-container">
+            <div><input type="checkbox" name="ByBudget" id="by-budget">
+                     <label for="by-budget">By Budget</label></div>
+                 <div><input type="checkbox" name="ByBrand" id="by-brand">
+                      <label for="by-brand">By Brand</label></div>
+                
+        </div>
+       <div class="search-btn-dropdown">
+       <div class="custom-dropdown">
+          <div class="selected">Select Brand</div>
+      <ul class="dropdown-list">
+    <li class="dropdown-heading">Popular Brands</li>
+    <li>Maruti</li>
+    <li>Tata</li>
+    <li>Kia</li>
+    <li>Toyota</li>
+    <li>Mercedes-Benz</li>
+
+    <li class="dropdown-heading">Luxury Brands</li>
+    <li>BMW</li>
+    <li>Audi</li>
+    <li>Jaguar</li>
+  </ul>
+  </div>
+  <button id="search-btn">Search</button>
+  </div>
+</div>
+
+
+
+
+  <section class="cars-section">
+<div id="most-searched-cars">
+      <h2>Most Searched Cars</h2>
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active">SUV</button>
+    <button class="tab">Hatchback</button>
+    <button class="tab">Sedan</button>
+    <button class="tab">MUV</button>
+    <button class="tab">Luxury</button>
+  </div>
+
+  <!-- Car Carousel -->
+  <div class="car-carousel">
+    <!-- <button class="scroll-btn left">&#8249;</button> -->
+
+    <div class="car-grid">
+      <div class="car-card">
+        <img src="assets/bolero.avif" alt="Mahindra Bolero">
+        <h3>Mahindra Bolero</h3>
+        <p class="price">₹ 9.81 - 10.93 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/creta.avif" alt="Hyundai Creta">
+        <h3>Hyundai Creta</h3>
+        <p class="price">₹ 11.11 - 20.50 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/xuv700.avif" alt="Mahindra XUV700">
+        <h3>Mahindra XUV700</h3>
+        <p class="price">₹ 14.49 - 25.14 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/scorpis.avif" alt="Mahindra Scorpio">
+        <h3>Mahindra Scorpio</h3>
+        <p class="price">₹ 13.77 - 17.72 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/roxx.avif" alt="Mahindra Thar ROXX">
+        <h3>Mahindra Thar ROXX</h3>
+        <p class="price">₹ 12.99 - 23.39 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/nexon.avif" alt="Tata Nexon">
+        <h3>Tata Nexon</h3>
+        <p class="price">₹ 8 - 15.60 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/fronx.avif" alt="Maruti FRONX">
+        <h3>Maruti FRONX</h3>
+        <p class="price">₹ 7.58 - 13.06 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/punch.avif" alt="Tata Punch">
+        <h3>Tata Punch</h3>
+        <p class="price">₹ 6 - 10.32 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/fortuner.avif" alt="Toyota Fortuner">
+        <h3>Toyota Fortuner</h3>
+        <p class="price">₹ 36.05 - 52.34 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/brezza.avif" alt="Maruti Brezza">
+        <h3>Maruti Brezza</h3>
+        <p class="price">₹ 8.69 - 14.14 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+    </div>
+
+    <!-- <button class="scroll-btn right">&#8250;</button> -->
+  </div>
+
+</div>
+<div id="electric-cars">
+<h2>Electric cars</h2>
+
+    <div class="car-grid">
+    <div class="car-card">
+        <img src="./assets/xev93.avif" alt="Mahindra XEV 9e">
+        <h3>Mahindra XEV 9e</h3>
+        <p class="price">₹ 21.90 - 31.25 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/cometev.avif" alt="MG Comet EV">
+        <h3>MG Comet EV</h3>
+        <p class="price">₹ 7.50 - 9.56 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/be6.avif" alt="Mahindra BE 6">
+        <h3>Mahindra BE 6</h3>
+        <p class="price">₹ 18.90 - 27.79 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/harrierev.avif" alt="Tata Harrier EV">
+        <h3>Tata Harrier EV</h3>
+        <p class="price">₹ 21.49 - 30.23 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+
+      <div class="car-card">
+        <img src="./assets/windsorev.avif" alt="MG Windsor EV">
+        <h3>MG Windsor EV</h3>
+        <p class="price">₹ 14 - 18.39 Lakh*</p>
+        <a href="#" class="offer-btn">View August Offers</a>
+      </div>
+    </div>
+
+    <!-- <button class="scroll-btn right">&#8250;</button> -->
+    </div>
+  </div>
+    </div>
+</div>
+<div id="upcoming-cars">
+  <h2>Upcoming Cars</h2>
+
+  <div class="car-grid">
+    <div class="car-card">
+      <img src="./assets/escudo.avif" alt="Maruti Escudo">
+      <h3>Maruti Escudo</h3>
+      <p class="price">₹ 9.75 Lakh (Estimated)</p>
+      <p class="launch">Expected Launch: Sep 3, 2025</p>
+      <a href="#" class="offer-btn">Alert Me When Launched</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/evitara.avif" alt="Maruti e Vitara">
+      <h3>Maruti e Vitara</h3>
+      <p class="price">₹ 17 - 22.50 Lakh (Estimated)</p>
+      <p class="launch">Expected Launch: Sep 10, 2025</p>
+      <a href="#" class="offer-btn">Alert Me When Launched</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/vinfast.avif" alt="VinFast VF7">
+      <h3>VinFast VF7</h3>
+      <p class="price">₹ 50 Lakh (Estimated)</p>
+      <p class="launch">Expected Launch: Sep 11, 2025</p>
+      <a href="#" class="offer-btn">Alert Me When Launched</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/ix2025.avif" alt="BMW iX 2025">
+      <h3>BMW iX 2025</h3>
+      <p class="price">₹ 1.45 Cr (Estimated)</p>
+      <p class="launch">Expected Launch: Sep 14, 2025</p>
+      <a href="#" class="offer-btn">Alert Me When Launched</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/punch.avif" alt="Tata Punch 2025">
+      <h3>Tata Punch 2025</h3>
+      <p class="price">₹ 6 Lakh (Estimated)</p>
+      <p class="launch">Expected Launch: Sep 15, 2025</p>
+      <a href="#" class="offer-btn">Alert Me When Launched</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/e-tron.avif" alt="Audi Q6 e-tron">
+      <h3>Audi Q6 e-tron</h3>
+      <p class="price">₹ 1 Cr (Estimated)</p>
+      <p class="launch">Expected Launch: Sep 15, 2025</p>
+      <a href="#" class="offer-btn">Alert Me When Launched</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/cle.avif" alt="Mercedes-Benz CLA Electric">
+      <h3>Mercedes-Benz CLA Electric</h3>
+      <p class="price">₹ 65 Lakh (Estimated)</p>
+      <p class="launch">Expected Launch: Sep 15, 2025</p>
+      <a href="#" class="offer-btn">Alert Me When Launched</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/urban.avif" alt="Toyota Urban Cruiser">
+      <h3>Toyota Urban Cruiser</h3>
+      <p class="price">₹ 18 Lakh (Estimated)</p>
+      <p class="launch">Expected Launch: Sep 16, 2025</p>
+      <a href="#" class="offer-btn">Alert Me When Launched</a>
+    </div>
+  </div>
+
+  <!-- <button class="scroll-btn right">&#8250;</button> -->
+</div>
+
+<div id="latest-cars">
+  <h2>Latest Cars</h2>
+
+  <div class="car-grid">
+    <div class="car-card">
+      <img src="./assets/kiger.avif" alt="Renault Kiger">
+      <h3>Renault Kiger</h3>
+      <p class="price">₹ 6.30 - 11.30 Lakh*</p>
+      <span class="tag">Facelift · Launched On : Aug 24, 2025</span>
+      <a href="#" class="offer-btn">View August Offers</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/3series.avif" alt="BMW 3 Series">
+      <h3>BMW 3 Series</h3>
+      <p class="price">₹ 75.90 - 76.90 Lakh*</p>
+      <span class="tag">New Variant · Launched On : Aug 19, 2025</span>
+      <a href="#" class="offer-btn">View August Offers</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/3seies-long-wheelbase.avif" alt="BMW 3 Series LWB">
+      <h3>BMW 3 Series Long Wheelbase</h3>
+      <p class="price">₹ 62 - 65 Lakh*</p>
+      <span class="tag">New Variant · Launched On : Aug 19, 2025</span>
+      <a href="#" class="offer-btn">View August Offers</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/tigor.avif" alt="Tata Tigor">
+      <h3>Tata Tigor</h3>
+      <p class="price">₹ 6 - 9.55 Lakh*</p>
+      <span class="tag">New Variant · Launched On : Aug 19, 2025</span>
+      <a href="#" class="offer-btn">View August Offers</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/camry.avif" alt="Toyota Camry">
+      <h3>Toyota Camry</h3>
+      <p class="price">₹ 48.50 Lakh*</p>
+      <span class="tag">New Variant · Launched On : Aug 18, 2025</span>
+      <a href="#" class="offer-btn">View August Offers</a>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/be6.avif" alt="Mahindra BE 6">
+      <h3>Mahindra BE 6</h3>
+      <p class="price">₹ 18.90 - 27.79 Lakh*</p>
+      <span class="tag">Electric · New Variant · Launched On : Aug 14, 2025</span>
+      <a href="#" class="offer-btn">View August Offers</a>
+    </div>
+  </div>
+</div>
+
+<div class="used-cars-section">
+  <h2>Trusted Used Cars by Budget</h2>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active">1 - 5 Lakh</button>
+    <button class="tab">5 - 10 Lakh</button>
+    <button class="tab">10 - 15 Lakh</button>
+  </div>
+
+  <!-- Car Grid -->
+  <div class="car-grid">
+    <div class="car-card">
+      <img src="./assets/wagonr.avif" alt="Maruti Wagon R">
+      <h3>Maruti Wagon R</h3>
+      <p class="price">Starting @ ₹ 1.00 Lakh</p>
+      <span class="available">191 Available Cars</span>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/swift.avif" alt="Maruti Swift">
+      <h3>Maruti Swift</h3>
+      <p class="price">Starting @ ₹ 1.00 Lakh</p>
+      <span class="available">142 Available Cars</span>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/i20.avif" alt="Hyundai Grand i10">
+      <h3>Hyundai Grand i10</h3>
+      <p class="price">Starting @ ₹ 1.80 Lakh</p>
+      <span class="available">129 Available Cars</span>
+    </div>
+
+    <div class="car-card">
+      <img src="./assets/i20.avif" alt="Hyundai i20">
+      <h3>Hyundai i20</h3>
+      <p class="price">Starting @ ₹ 1.00 Lakh</p>
+      <span class="available">111 Available Cars</span>
+    </div>
+  </div>
+</div>
+
+    <div id="popular-brands">
+        <h2>Popular Brands</h2>
+    
+        <div class="brand-grid">
+            <div class="brand-card">
+                <img src="./assets/maruti.avif" alt="Maruti">
+                <p>Maruti</p>
+            </div>
+            <div class="brand-card">
+                <img src="./assets/tata.avif" alt="Tata">
+                <p>Tata</p>
+            </div>
+            <div class="brand-card">
+                <img src="./assets/kia.png" alt="Kia">
+                <p>Kia</p>
+            </div>
+            <div class="brand-card ">
+                <img src="./assets/toyota.png" alt="Toyota">
+                <p>Toyota</p>
+            </div>
+            <div class="brand-card">
+                <img src="./assets/hyundai.png" alt="Hyundai">
+                <p>Hyundai</p>
+            </div>
+            <div class="brand-card">
+                <img src="./assets/mahindra.avif" alt="Mahindra">
+                <p>Mahindra</p>
+            </div>
+        </div>
+          
+    </div>
+
+
+</section>
+
+
+  </main>
+
+  <footer class="footer">
+  <div class="footer-container">
+    
+   <div class="footer-info">
+  <ul>
+    <li>
+      <img src="./assets/prize.png" alt="Prize">
+      <div>
+        <h3>India’s #1</h3>
+        <span>Largest Auto Portal</span>
+      </div>
+    </li>
+
+    <li>
+      <img src="./assets/price.png" alt="">
+      <div>
+        <strong>Car Sold</strong>
+        <span>Every 4 minute</span>
+      </div>
+    </li>
+
+    <li>
+      <img src="./assets/christmas-sale.png" alt="">
+      <div>
+        <strong>Offers</strong>
+        <span>Stay updated pay less</span>
+      </div>
+    </li>
+
+    <li>
+      <img src="./assets/line.png" alt="">
+      <div>
+        <strong>Compare</strong>
+        <span>Decode the right car</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<hr>
+<div class="footer-container-2">
+<div class="footer-links">
+      <h4>ABOUT CARDEKHO</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers With Us</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Corporate Policies</a></li>
+        <li><a href="#">Investors</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>CONNECT WITH US</h4>
+      <ul>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Advertise with Us</a></li>
+        <li><a href="#">Become Partner Dealer</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>OTHERS</h4>
+      <ul>
+        <li><a href="#">TrucksDekho</a></li>
+        <li><a href="#">TyreDekho</a></li>
+        <li><a href="#">TractorsDekho</a></li>
+        <li><a href="#">Girnar Vision Fund</a></li>
+        <li><a href="#">Emergency Response</a></li>
+        <li><a href="#">Car Sales Trends</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links-right">
+ <div class="footer-links grid-links">
+      <h4>Experience CarDekho App</h4>
+      <ul>
+        <li><a href="#"><img src="./assets/apple.avif" alt=""></a></li>
+        <li><a href="#"><img src="assets/android.avif" alt=""></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links grid-links">
+      <h4>CarDekho Group Ventures</h4>
+      <ul>
+        <li><a href="#"><img src="./assets/bikedekho.svg" alt=""></a></li>
+        <li><a href="#"><img src="./assets/ruppy.svg" alt=""></a></li>
+        <li><a href="#"><img src="./assets/zigwheels.svg" alt=""></a></li>
+        <li><a href="#"><img src="./assets/insuranceDekho.svg" alt=""></a></li>
+        <li><a href="#"><img src="./assets/revv.svg" alt=""></a></li>
+      </ul>
+    </div>
+    </div>
+   
+    </div>
+  </div>
+<hr>
+  <div class="footer-bottom">
+    <div>
+ <p style="font-size: 12px; color:#666;  margin-left: 24px;">© 2025 Girnar Software Pvt. Ltd.</p>
+    </div>
+   <div class="social-icons">
+<p style="font-weight: bold;">Connect: 
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </p>
+   </div>
+    
+  </div>
+</footer>
+
+
+</body>
+</html>
