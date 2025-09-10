@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>My Cart</title>
+
+    <script type="module" src="/build/stencil-task-01.esm.js"></script>
+    <script nomodule src="/build/stencil-task-01.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+     
+  </head>
+<body>
+  <div class="container">
+    <h1>Store</h1>
+    <stencil-cart-icon></stencil-cart-icon>
+    <stencil-cart-modal></stencil-cart-modal>
+    <div class="product-container">
+
+   
+    <h2>Products</h2>
+
+    <stencil-product-card product='{"id":1,"name":"Bed","price":150,"image":"./assets/bed.jpg"}'></stencil-product-card>
+    <stencil-product-card product='{"id":2,"name":"Racket","price":49,"image":"./assets/racket.png"}'></stencil-product-card>
+    <stencil-product-card product='{"id":3,"name":"Ball","price":19,"image":"./assets/ball.jpg"}'></stencil-product-card>
+        <stencil-product-card product='{"id":4,"name":"Gloves","price":190,"image":"./assets/gloves.jpg"}'></stencil-product-card>
+            <stencil-product-card product='{"id":5,"name":"Helmet","price":160,"image":"./assets/helmet.jpg"}'></stencil-product-card>
+                <stencil-product-card product='{"id":6,"name":"Shoes","price":500,"image":"./assets/shoes.jpg"}'></stencil-product-card>
+     </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.notes-board {
+  position: relative;
+  flex: 2;
+  background: #fdfdfd;
+  /* border: 2px dashed #ccc; */
+  border-radius: 12px;
+  min-height: 600px;
+  /* overflow: hidden;/ */
+}
