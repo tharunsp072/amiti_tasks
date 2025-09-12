@@ -1,0 +1,20 @@
+ .main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+ }
+ 
+ .card-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 250px 200px;
+  column-gap: 70px;
+  row-gap: 30px;
+  justify-items: center;
+  align-items: center;
+  margin: 0;
+}
+
+* {
+    margin: 20px;
+}
