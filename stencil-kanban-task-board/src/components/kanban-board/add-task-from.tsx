@@ -44,7 +44,7 @@ export class AddTaskFrom {
                             <input type="text" 
                             id="task-title"
                              placeholder="Enter task title"
-                             value={this.title} 
+                             value={this.title}
                              onInput={(e:any)=>(
                                 this.title = e.target.value
                              )}  required/>
