@@ -1,7 +1,7 @@
 package practiseDsa;
 
 import java.util.ArrayList;
-import java.util.Collections;
+//import java.util.Collections;
 import java.util.List;
 
 public class NumbersManipulation {
@@ -98,5 +98,109 @@ public class NumbersManipulation {
 			backtrackSubsets(result, temp, nums, i+1);
 			temp.remove(temp.size()-1);
 		}
+	}
+	
+	
+	public static int factorialUsingRecursion(int n) {
+		if(n==0 || n==1) {
+			return 1;
+		}
+		
+		return n * factorialUsingRecursion(n-1);
+	}
+	
+//	
+//	public static int[] twoSortedIntoSingleSorted() {
+//		int arr[] = new int[] {1,3,4,6,7};
+//		int arr1[] = new int[] {2,5,8};
+//		for(int i = 0;i<)
+//	}
+	
+	
+	public static boolean mirrorInverseArray() {
+		int arr[] = new int[] {3,4,2,0,1}; // this is a real mirror array
+		for(int i = 0;i<arr.length;i++) {
+			if(arr[arr[i]] != i) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public static int[] sumOfArrayExceptSelf() {
+		int arr[] = new int[]{1,2,3,4};
+		int res[] = new int[] {arr.length};
+		for(int i = 0;i<arr.length;i++) {
+//			res[i] = 1;
+			for(int j=0;j<arr.length;i++) {
+				if(j==i) {
+					continue;
+				}
+				res[i] += arr[j];
+			}
+		}
+		return res;
+		
+	}
+	
+	public static int contiguosSubArrayWithLargestProduct() {
+		int arr[] = new int[] {1,2,4,-3,6,1};
+		int maxproduct = 1;
+		int start = 0,end =0;
+		int currmax = 1;
+		while(end<arr.length) {
+			currmax = Math.max( currmax,currmax * arr[end]);
+			if(currmax > maxproduct) {
+				end++;
+				maxproduct = currmax;
+			} else 
+			{
+				start++;
+				currmax = 0;
+			}
+		}
+		return maxproduct;
+	}
+	
+//	Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+//
+//			 
+//
+//			Example 1:
+//
+//			Input: nums = [1,2,3]
+//			Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+//			Example 2:
+//
+//			Input: nums = [0,1]
+//			Output: [[0,1],[1,0]]
+//			Example 3:
+//
+//			Input: nums = [1]
+//			Output: [[1]]
+	
+	class Solution {
+	    public List<List<Integer>> permute(int[] nums) {
+	        List<List<Integer>> result = new ArrayList<>();
+	        boolean[] used =  new boolean[nums.length];
+	        backtrack(result,new ArrayList<>(),nums,used);
+	        return result;
+	    }
+
+	    public void backtrack(List<List<Integer>> result,List<Integer> temp,int[] nums,boolean[] used){
+	        if(temp.size() == nums.length ){
+	            result.add(new ArrayList<>(temp));
+	            return;
+	        }
+
+	        for(int i=0;i<nums.length;i++){
+	            if(used[i]) continue;
+	            temp.add(nums[i]);
+	            used[i] = true;
+	            backtrack(result,temp,nums,used);
+	            used[i] = false;
+	            temp.remove(temp.size()-1);
+	        }
+	    }
 	}
 }

@@ -43,7 +43,7 @@ export class AddTaskFrom {
                         <form onSubmit={(e)=>{this.handleSubmit(e)}}>
                             <input type="text" 
                             id="task-title"
-                             placeholder="Enter task title"
+                             placeholder="Enter task title" 
                              value={this.title}
                              onInput={(e:any)=>(
                                 this.title = e.target.value

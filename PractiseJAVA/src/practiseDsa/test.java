@@ -1,6 +1,6 @@
 package practiseDsa;
 
-import java.security.KeyStore.Entry;
+//import java.security.KeyStore.Entry;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -162,8 +162,8 @@ public class test {
 		}
 		return arr;
 	}
-//	Finding Frequnecy
 	
+//	Finding Frequency	
 	public static Map<Integer,Integer> frequency(){
 		int arr[] = new int[]{1,2,3,5,4,4,6,5,3,3,3,3};
 		Map<Integer,Integer> freq = new HashMap<>();
@@ -200,7 +200,7 @@ public class test {
 	
 //	SLiding WInDoW	
 	public static int maxSubArray() {
-		int arr[] = new int[] {};
+		int arr[] = new int[] {-2,7, -3, 4, -1, -2, 1, 5, -3};
 		int k =3;
 		int sumarr = 0;
 		
@@ -239,8 +239,22 @@ public class test {
 		
 	}
 	
-
-	
+//	Given nums and an integer target, return the minimal length of a contiguous subarray of which the sum ≥ target. If none, return 0.
+	public static int minimalengthSubArray() {
+		int arr[] = new int[]{-2,7, -3, 4, -1, -2, 1, 5, -3};
+		int sum = 0,start=0,target = 10,minlength=Integer.MAX_VALUE,min=0;
+		for(int end=0;end<arr.length;end++) {
+			sum += arr[end];
+			while(sum >= target) {
+				min = end - start + 1;
+				minlength = Math.min(minlength, min);
+				sum -= arr[start];
+				start++;
+			}
+		}
+		return minlength;
+	}
+		
 	public static void main(String args[]) {
 //		int counted = consecutive();
 //		System.out.println(counted);
@@ -268,6 +282,11 @@ public class test {
 		System.out.println("Listen and sient is :"+ (anagrams() == true ? "Anagram" : "Not Anagram"));
 		System.out.println("Maximum Sum of SubArray:"+maximumSubArraySum());
 		System.out.println("Anagrams List:"+anagramsList());
+		System.out.println("Tharun reversed : "+ StringManipulation.reverseWithoutBuiltin());
+		System.out.println("Factorial Using Recursion: "+ NumbersManipulation.factorialUsingRecursion(5));
+		System.out.println("Maximum sub array sum using sliding window: "+maxSubArray());
+		System.out.println("Minimum sub array length of sum using sliding window: "+minimalengthSubArray());
+		
 	}
 
 }

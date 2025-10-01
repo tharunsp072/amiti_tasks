@@ -1,12 +1,17 @@
 package practiseDsa;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
+//import java.util.Set;
 
+//interface Car{
+//	void start();
+//	void stop();
+//}
 public class StringManipulation {
 	
 	public static String reverse(String original) {
@@ -76,6 +81,34 @@ public class StringManipulation {
 //		}
 //	}
 	
+	
+	public static  String reverseWithoutBuiltin() {
+		String str = "tharun";
+		char ch[] = str.toCharArray();
+		StringBuilder str1 = new StringBuilder();
+		for(int  i = str.length()-1;i>=0;i--) {
+			str1.append(String.valueOf(ch[i]));
+		}
+		return str1.toString();
+	}
+	
+	public  static HashSet<String> findAnagrams(String s, String p) {
+        HashSet<String> anagrams = new HashSet<>();
+        List<Integer> list = new ArrayList<>();
+        for(int i=0;i+3<s.length();i++){
+            String temp = s.substring(i,i+p.length());
+            if(!anagrams.contains(temp) && temp.equals(p) ){
+            	anagrams.add(temp);
+                list.add(i);
+            }
+        }
+//        return list;
+        return (anagrams);
+    }
+	
+	public static void main(String args[]) {
+		System.out.println(findAnagrams("cbaebabacd", "abc"));
+	}
 
 
 }

@@ -20,7 +20,7 @@ public class test2 {
 	public static void backtrack(List<List<Integer>> result,List<Integer> temp,int[]nums,int[] count) {
 		
 		
-		if(!temp.isEmpty()  ) {
+		if(!temp.isEmpty()) {
 			result.add(new ArrayList<>(temp));
 //			System.out.println(result);
 //			return;
@@ -36,9 +36,7 @@ public class test2 {
 //			}
 			
 			if(count[i] < 2) {
-				count[i]++;
-				
-			
+				count[i]++;			
 			temp.add(nums[i]);
 			backtrack(result,temp,nums,count);
 			temp.remove(temp.size()-1);

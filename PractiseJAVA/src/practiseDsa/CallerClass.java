@@ -2,7 +2,7 @@ package practiseDsa;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class CallerClass {
 	public static void main(String args[]) {
@@ -16,7 +16,6 @@ public class CallerClass {
 		System.out.println("Smallest number in an array : " + numbers[0]);
 		
 //		Scanner sc = new Scanner(System.in);
-//		
 //		System.out.println("Enter the String to perfrom check if palindrome or not ");
 //		String userInput = sc.nextLine();
 //		sc.close();
@@ -34,6 +33,7 @@ public class CallerClass {
 		System.out.println("Second larget: " + NumbersManipulation.secondLargest(List.of(1,2,3,4,5,7,64)));
 		
 		System.out.print("Numbers after sort: ");
+		
 		int numbers1[]  = NumbersManipulation.bubbleSort(new int[]{5,7,2,1,7});
 		for(int num : numbers1) {
 			System.out.print(num+" ");
@@ -41,7 +41,8 @@ public class CallerClass {
 		
 		System.out.println();
 		System.out.println("is Anagram = Listen and silent : " + StringManipulation.isAnagram("listen","silent"));
-		
+		test9 test = new test9();
+		System.out.println(test);
 	}
 	
 	
